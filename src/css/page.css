@@ -364,3 +364,5 @@
 .SITE_SHCARD .sval .left_col dl sb_sth_none_last_last {border-bottom: 1px solid #ccc; height: 15px; background-color: #efefef; border-radius: 0px 0px 20px 0px;}
 .SITE_SHCARD .sval .left_col dl .sh_upper_sth {text-align: left;font-size: 11px; font-weight: 900; color: #4b4b4b;}
 .SITE_SHCARD .sval .left_col dl sb_body_sth {border: none; text-align: center; vertical-align: middle; padding-top: 5px; padding-bottom: 5px; padding-left: 35px; padding-right: 35px; width: auto; font-size: 15px; color: #4b4b4b; background-color: #efefef;}
+
+.SITE_SHCARD .blank_col {width: 50px;}

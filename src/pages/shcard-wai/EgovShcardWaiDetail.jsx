@@ -4,6 +4,100 @@ import { Link } from 'react-router-dom';
 import URL from 'constants/url';
 import { default as EgovLeftNav } from 'components/leftmenu/EgovLeftNavSHCardWAI';
 
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend,
+} from 'chart.js';
+import { Line, Bar } from 'react-chartjs-2';
+import faker from 'faker';
+
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend,
+);
+
+export const options_line = {
+    responsive: true,
+    plugins: {
+        legend: {
+            position: 'top',
+        },
+        title: {
+            display: false,
+        },
+    },
+};
+
+export const options_hbar = {
+    indexAxis: 'y',
+    elements: {
+        bar: {
+            borderWidth: 2,
+        },
+    },
+    responsive: true,
+    plugins: {
+        legend: {
+            position: 'right',
+        },
+        title: {
+            display: false,
+        },
+    },
+};
+
+const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+
+export const data_line = {
+    labels,
+    datasets: [
+        {
+            label: 'Dataset 1',
+            data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        },
+        {
+            label: 'Dataset 2',
+            data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+            borderColor: 'rgb(53, 162, 235)',
+            backgroundColor: 'rgba(53, 162, 235, 0.5)',
+        },
+    ],
+};
+
+export const data_hbar = {
+    labels,
+    datasets: [
+        {
+            label: 'Dataset 1',
+            data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        },
+        {
+            label: 'Dataset 2',
+            data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+            borderColor: 'rgb(53, 162, 235)',
+            backgroundColor: 'rgba(53, 162, 235, 0.5)',
+        },
+    ],
+};
+
+
 function EgovShcardWaiDetail() {
     return (
         <div className="container">
@@ -23,65 +117,82 @@ function EgovShcardWaiDetail() {
                     <EgovLeftNav></EgovLeftNav>
                     {/* <!--// Navigation --> */}
 
-                    <div className="contents SITE_CONTACT_US" id="contents">
+                    <div className="contents SITE_SHCARD" id="contents">
                         {/* <!-- 본문 --> */}
 
                         <h1 className="tit_3">진단 상세</h1>
 
-                        <p className="txt_1">표준프레임워크 경량환경 포털사이트를 소개합니다.</p>
+                        <p className="txt_1">상호별 상세정보와 매출 정보에 대해 표시합니디.</p>
 
-                        <h2 className="tit_4">찾아오시는길</h2>
+                        <h2 className="tit_5">도심권 상세 데이터</h2>
+                        <br />
 
-                        <div className="map">
-                            <a href="https://naver.me/FHYuP0ok" target="_blank" rel="noreferrer">
-                                <img src="/assets/images/map.png" alt="" />
-                            </a>
+                        {/* <!-- 게시판목록 --> */}
+                        <div className="board_list BRD007">
+                            <div className="head">
+                                <span>번호</span>
+                                <span>소프트웨어명</span>
+                                <span>다운</span>
+                                <span>크기</span>
+                                <span>등록일</span>
+                            </div>
+                            <div className="result">
+                                {/* <!-- case : 데이터 없을때 --> */}
+                                {/* <p className="no_data" key="0">검색된 결과가 없습니다.</p> */}
+
+                                {/* <!-- case : 데이터 있을때 --> */}
+                                <Link to={URL.SUPPORT_DOWNLOAD_DETAIL} className="list_item">
+                                    <div>3</div>
+                                    <div className="al">전자정부표준프레임워크 인스톨러(Egovframework installer) V1.037</div>
+                                    <div>100</div>
+                                    <div>16Mb</div>
+                                    <div>2021-7-24</div>
+                                </Link>
+                                <Link to={URL.SUPPORT_DOWNLOAD_DETAIL} className="list_item">
+                                    <div>2</div>
+                                    <div className="al">전자정부표준프레임워크 인스톨러(Egovframework installer) V1.037</div>
+                                    <div>100</div>
+                                    <div>16Mb</div>
+                                    <div>2021-7-24</div>
+                                </Link>
+                                <Link to={URL.SUPPORT_DOWNLOAD_DETAIL} className="list_item">
+                                    <div>1</div>
+                                    <div className="al">전자정부표준프레임워크 인스톨러(Egovframework installer) V1.037</div>
+                                    <div>100</div>
+                                    <div>16Mb</div>
+                                    <div>2021-7-24</div>
+                                </Link>
+                            </div>
+                        </div>
+                        {/* <!--// 게시판목록 --> */}
+
+                        <div className="board_bot">
+                            {/* <!-- Paging --> */}
+                            <div className="paging">
+                                <ul>
+                                    <li className="btn"><button to="#" className="first">처음</button></li>
+                                    <li className="btn"><button to="#" className="prev">이전</button></li>
+                                    <li><button to="#" className="cur">1</button></li>
+                                    <li><button to="#">2</button></li>
+                                    <li><button to="#">3</button></li>
+                                    <li><button to="#">4</button></li>
+                                    <li><button to="#">5</button></li>
+                                    <li className="btn"><button to="#" className="next">다음</button></li>
+                                    <li className="btn"><button to="#" className="last">마지막</button></li>
+                                </ul>
+                            </div>
+                            {/* <!--/ Paging --> */}
                         </div>
 
-                        <div className="addr">
+                        <div className="smap">
                             <div className="left_col">
-                                <h3>표준프레임워크센터 주소</h3>
-                                <dl>
-                                    <dt>도로명주소</dt>
-                                    <dd>04513 서울특별시 중구 세종대로 39 대한서울상공회의소 7층</dd>
-                                </dl>
-                                <dl>
-                                    <dt>지번주소</dt>
-                                    <dd>04513 서울특별시 중구 남대문로4가 45 대한서울상공회의소 7층</dd>
-                                </dl>
+                                <h3>도심권 TOP5 업종별 매출 평균</h3>
+                                <dl><Bar options={options_hbar} data={data_hbar} /></dl>
                             </div>
-                            <div className="right_col">
-                                <h3>QR코드로 위치알아보기</h3>
-                                <p>스마트폰에서 QR코드<br />
-                                    리더를 이용해 사진·<br />
-                                    지도 등 다양한 정보를<br />
-                                    확인하세요.</p>
-                                <img className="qr" src="/assets/images/qrcode.png" alt="qr code" />
-                            </div>
-                        </div>
-
-                        <div className="way">
+                            <div className='blank_col' />
                             <div className="left_col">
-                                <h3>찾아오시는 길</h3>
-                                <dl>
-                                    <dt>지하철 2호선</dt>
-                                    <dd>시청역 9번 출구 5분거리</dd>
-                                </dl>
-                                <dl>
-                                    <dt>지하철 1호선</dt>
-                                    <dd>서울역 3번 출구 5분거리</dd>
-                                </dl>
-                            </div>
-                            <div className="right_col">
-                                <h3>연락처</h3>
-                                <dl>
-                                    <dt className="call">전화</dt>
-                                    <dd>0000-0000</dd>
-                                </dl>
-                                <dl>
-                                    <dt className="email">이메일</dt>
-                                    <dd>egovframeexample@gmail.com</dd>
-                                </dl>
+                                <h3>월별 전체 및 도심권 매출 평균</h3>
+                                <dl><Line options={options_line} data={data_line} /></dl>
                             </div>
                         </div>
 

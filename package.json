@@ -4,9 +4,11 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^5.3.2",
+    "chart.js": "^4.4.0",
     "qs": "^6.11.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
+    "react-chartjs-2": "^5.2.0",
     "react-datepicker": "^4.8.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.0",
@@ -16,7 +18,9 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0"
+    "@testing-library/user-event": "^13.5.0",
+    "faker": "^5.5.3",
+    "Faker": "^0.7.2"
   },
   "scripts": {
     "start": "set PORT=7910 && react-scripts start",

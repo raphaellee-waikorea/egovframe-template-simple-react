@@ -30,7 +30,7 @@ function EgovShcardWaiSummary() {
 
                         <p className="txt_1">서울시 전역의 소상공인에 대한 건강검진 결과에 대해 알려드립니다.</p>
                         
-                        <h2 className="tit_4">A.I의 의견을 전해 드립니다.</h2>
+                        <h2 className="tit_5">A.I의 의견을 전해 드립니다.</h2>
 
                         <p className="msg_2">
                             현재 서울시 소상공인의 건강상태에 대해 말씀드리자면...<br/>
@@ -39,7 +39,7 @@ function EgovShcardWaiSummary() {
                         </p>
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
-                        <h2 className="tit_4">지도로 확인해 보겠습니다.</h2>
+                        <h2 className="tit_5">지도로 확인해 보겠습니다.</h2>
 
                         <p className="msg_2_center">
 
