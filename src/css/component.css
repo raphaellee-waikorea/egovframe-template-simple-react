@@ -271,3 +271,82 @@ select::-ms-expand {display:none;}
 
 /* 리액트 관련 */
 .react-datepicker__tab-loop {display: inline-block;}
+
+/* 소상공인 관련 별도 작성 */
+.msg_2 {
+    margin-top: 20px;
+    padding: 33px 40px;
+    border-top: 2px solid #dde2e5;
+    border-radius: 0 0 10px 10px;
+    color: #454545;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -1px;
+    background: #f7f7f7;
+}
+
+.msg_2_center {
+    margin-top: 20px;
+    padding: 33px 40px;
+    border-top: 2px solid #dde2e5;
+    border-radius: 0 0 10px 10px;
+    color: #454545;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -1px;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+.shcard_MAP {
+    background:#eaeaea;
+    overflow:visible
+}
+
+.shcard_OUTLINE {
+    stroke-linejoin:round;
+    stroke: #ffffff;
+    stroke-width: 2;
+}
+#shcard_CD11110 { fill: #ff0000; } /* 종로구   */
+#shcard_CD11140 { fill: #16a085; } /* 중구     */
+#shcard_CD11170 { fill: #f39c12; } /* 용산구   */
+#shcard_CD11200 { fill: #2ecc71; } /* 성동구   */
+#shcard_CD11215 { fill: #e67e22; } /* 광진구   */
+#shcard_CD11230 { fill: #27ae60; } /* 동대문구 */
+#shcard_CD11260 { fill: #d35400; } /* 중랑구   */
+#shcard_CD11290 { fill: #3498db; } /* 성북구   */
+#shcard_CD11305 { fill: #e74c3c; } /* 강북구   */
+#shcard_CD11320 { fill: #2980b9; } /* 도봉구   */
+#shcard_CD11350 { fill: #c0392b; } /* 노원구   */
+#shcard_CD11380 { fill: #9b59b6; } /* 은평구   */
+#shcard_CD11410 { fill: #8e44ad; } /* 서대문구 */
+#shcard_CD11440 { fill: #34495e; } /* 마포구   */
+#shcard_CD11470 { fill: #2c3e50; } /* 양천구   */
+#shcard_CD11500 { fill: #1abc9c; } /* 강서구   */
+#shcard_CD11530 { fill: #f1c40f; } /* 구로구   */
+#shcard_CD11545 { fill: #16a085; } /* 금천구   */
+#shcard_CD11560 { fill: #f39c12; } /* 영등포구 */
+#shcard_CD11590 { fill: #2ecc71; } /* 동작구   */
+#shcard_CD11620 { fill: #e67e22; } /* 관악구   */
+#shcard_CD11650 { fill: #27ae60; } /* 서초구   */
+#shcard_CD11680 { fill: #d35400; } /* 강남구   */
+#shcard_CD11710 { fill: #3498db; } /* 송파구   */
+#shcard_CD11740 { fill: #e74c3c; } /* 강동구   */
+.shcard_LINE {
+    stroke-linejoin:round;
+    stroke: #ffffff;
+    stroke-width: 1;
+    fill: none;
+}
+.shcard_POINT {
+    stroke: #ffffff;
+    stroke-width: 1;
+    fill: #ffffff;
+}
+.shcard_TEXT {
+    fill: #ffffff;
+    font-size: 16px;
+    text-anchor: middle;
+    alignment-baseline: middle;
+}

@@ -7,6 +7,12 @@ const URL = {
     ERROR                       : "/error", //로그인
     
     //ABOUT
+    SHCARD                      : "/shcard-wai", //소상공인 건강검진
+    SHCARD_SUMMARY              : "/shcard-wai/checkSummary", // 소상공인 건강검진/진단 요약
+    SHCARD_FULL_SCOPE           : "/shcard-wai/checkFullScope", // 소상공인 건강검진/종합 진단
+    SHCARD_DETAIL_VIEW          : "/shcard-wai/checkDetailView", // 소상공인 건강검진/진단 상세
+    
+    //ABOUT
     ABOUT                       : "/about", //사이트소개   
     ABOUT_SITE                  : "/about/site", // 사이트소개/소개
     ABOUT_HISTORY               : "/about/history", // 사이트소개/연혁

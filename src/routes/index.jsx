@@ -13,6 +13,11 @@ import EgovError from 'components/EgovError';
 import EgovMain from 'pages/main/EgovMain';
 import EgovLogin from 'pages/login/EgovLogin';
 
+//소상공인
+import EgovShcardWaiSummary from 'pages/shcard-wai/EgovShcardWaiSummary';
+import EgovShcardWaiFullScope from 'pages/shcard-wai/EgovShcardWaiFullScope';
+import EgovShcardWaiDetail from 'pages/shcard-wai/EgovShcardWaiDetail';
+
 //ABOUT
 import EgovAboutSite from 'pages/about/EgovAboutSite';
 import EgovAboutHistory from 'pages/about/EgovAboutHistory';
@@ -138,7 +143,7 @@ const SecondRoutes = () => {
       <EgovHeader loginUser={loginVO} onChangeLogin={(user) => setLoginVO(user)} />
       <Routes>
         {/* MAIN */}
-        <Route path={URL.MAIN} element={<EgovMain />} />
+        <Route path={URL.MAIN} element={<EgovShcardWaiSummary />} />
 
         {/* LOGIN */}
         <Route path={URL.LOGIN} element={<EgovLogin
@@ -148,6 +153,11 @@ const SecondRoutes = () => {
         {/* ERROR */}
         <Route path={URL.ERROR} element={<EgovError />} />
 
+        {/* 소상공인 */}
+        <Route path={URL.SHCARD} element={<Navigate to={URL.SHCARD_SUMMARY} />} />
+        <Route path={URL.SHCARD_SUMMARY} element={<EgovShcardWaiSummary />} />
+        <Route path={URL.SHCARD_FULL_SCOPE} element={<EgovShcardWaiFullScope />} />
+        <Route path={URL.SHCARD_DETAIL_VIEW} element={<EgovShcardWaiDetail />} />
         {/* ABOUT */}
         <Route path={URL.ABOUT} element={<Navigate to={URL.ABOUT_SITE} />} />
         <Route path={URL.ABOUT_SITE} element={<EgovAboutSite />} />

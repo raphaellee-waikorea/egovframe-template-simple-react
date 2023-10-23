@@ -59,7 +59,7 @@ function EgovLoginContent(props) {
     const submitFormHandler = (e) => {
         console.log("EgovLoginContent submitFormHandler()");
         
-        const loginUrl = "/auth/login-jwt"
+        const loginUrl = "/api/v1/small/auth/login.do"
         const requestOptions = {
             method: "POST",
             headers: {
@@ -101,7 +101,7 @@ function EgovLoginContent(props) {
             {/* <!-- 본문 --> */}
             <div className="Plogin">
                 <h1>로그인</h1>
-                <p className="txt">전자정부표준프레임워크 경량환경 홈페이지 로그인 페이지입니다.<br />로그인을 하시면 모든 서비스를 제한없이 이용하실 수 있습니다.</p>
+                <p className="txt">소상공인 건강검진 로그인 페이지입니다.<br />로그인을 하시면 모든 서비스를 제한없이 이용하실 수 있습니다.</p>
 
                 <div className="login_box">
                     <form name="" method="" action="" >
@@ -122,12 +122,6 @@ function EgovLoginContent(props) {
                         </fieldset>
                     </form>
                 </div>
-
-                <ul className="list">
-                    <li>비밀번호는 6~12자의 영문 대/소문자, 숫자, 특수문자를 혼합해서 사용하실 수 있습니다.</li>
-                    <li>쉬운 비밀번호나 자주 쓰는 사이트의 비밀번호가 같을 경우, 도용되기 쉬우므로 주기적으로
-                        변경하셔서 사용하는 것이 좋습니다.</li>
-                </ul>
             </div>
             {/* <!--// 본문 --> */}
         </div>

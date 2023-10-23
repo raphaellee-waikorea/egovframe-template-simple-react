@@ -60,16 +60,18 @@ function EgovHeader({ loginUser, onChangeLogin }) {
         // <!-- header -->
         <div className="header">
             <div className="inner">
+                {/* <!--
                 <Link to={URL.MAIN} className="ico lnk_go_template" target="_blank">홈페이지 템플릿 소개 페이지로 이동</Link>
-
+                 --> */}
                 <h1 className="logo">
-                    <Link to={URL.MAIN} className="w"><img src="/assets/images/logo_w.png" alt="표준프레임워크포털 eGovFrame 심플홈페이지" /></Link>
-                    <Link to={URL.MAIN} className="m"><img src="/assets/images/logo_m.png" alt="표준프레임워크포털 eGovFrame 심플홈페이지" /></Link>
+                    <Link to={URL.SHCARD} className="w"><img src="/assets/images/logo_wai_w.png" alt="표준프레임워크포털 eGovFrame 심플홈페이지" /></Link>
+                    <Link to={URL.SHCARD} className="m"><img src="/assets/images/logo_wai_m.png" alt="표준프레임워크포털 eGovFrame 심플홈페이지" /></Link>
                 </h1>
 
                 <div className="gnb">
                     <h2 className="blind">주메뉴</h2>
                     <ul>
+                        <li><NavLink to={URL.SHCARD} className={({ isActive }) => (isActive ? "cur" : "")}>소상공인 건강검진</NavLink></li>
                         <li><NavLink to={URL.ABOUT} className={({ isActive }) => (isActive ? "cur" : "")}>사이트소개</NavLink></li>
                         <li><NavLink to={URL.INTRO} className={({ isActive }) => (isActive ? "cur" : "")}>정보마당</NavLink></li>
                         <li><NavLink to={URL.SUPPORT} className={({ isActive }) => (isActive ? "cur" : "")}>고객지원</NavLink></li>
@@ -77,6 +79,8 @@ function EgovHeader({ loginUser, onChangeLogin }) {
                         {sessionUserSe ==='USR' &&
                             <li><NavLink to={URL.ADMIN} className={({ isActive }) => (isActive ? "cur" : "")}>사이트관리</NavLink></li>
                         }
+                        {/* <!--
+                 --> */}
                     </ul>
                 </div>
 
@@ -107,6 +111,15 @@ function EgovHeader({ loginUser, onChangeLogin }) {
             <div className="all_menu WEB closed">
                 <h2 className="blind">전체메뉴</h2>
                 <div className="inner">
+                    <div className="col">
+                        <h3>소상공인 건강검진</h3>
+                        <ul>
+                            <li><NavLink to={URL.SHCARD_SUMMARY} className={({ isActive }) => (isActive ? "cur" : "")}>진단 요약</NavLink></li>
+                            <li><NavLink to={URL.SHCARD_FULL_SCOPE} className={({ isActive }) => (isActive ? "cur" : "")}>종합 진단</NavLink></li>
+                            <li><NavLink to={URL.SHCARD_DETAIL_VIEW} className={({ isActive }) => (isActive ? "cur" : "")}>상세 진단 내역</NavLink></li>
+                        </ul>
+                    </div>
+                {/* <!--
                     <div className="col">
                         <h3>사이트소개</h3>
                         <ul>
@@ -153,6 +166,7 @@ function EgovHeader({ loginUser, onChangeLogin }) {
                             </ul>
                         </div>
                     }
+                 --> */}
                 </div>
             </div>
             {/* <!-- All menu : mobile --> */}
@@ -173,6 +187,15 @@ function EgovHeader({ loginUser, onChangeLogin }) {
                     <button className="btn noscript close" type="button">전체메뉴 닫기</button>
                 </div>
                 <div className="menu">
+                    <h3><Link to={URL.SHCARD}>소상공인 건강검진</Link></h3>
+                    <div className="submenu closed">
+                        <ul>
+                            <li><NavLink to={URL.SHCARD_SUMMARY} className={({ isActive }) => (isActive ? "cur" : "")}>진단 요약</NavLink></li>
+                            <li><NavLink to={URL.SHCARD_FULL_SCOPE} className={({ isActive }) => (isActive ? "cur" : "")}>종합 진단</NavLink></li>
+                            <li><NavLink to={URL.SHCARD_DETAIL_VIEW} className={({ isActive }) => (isActive ? "cur" : "")}>상세 진단 내역</NavLink></li>
+                        </ul>
+                    </div>
+                {/* <!--
                     <h3><Link to={URL.ABOUT}>사이트소개</Link></h3>
                     <div className="submenu closed">
                         <ul>
@@ -221,6 +244,7 @@ function EgovHeader({ loginUser, onChangeLogin }) {
                             </div>
                         </>
                     }
+                 --> */}
                 </div>
             </div>
             {/* <!--// All menu --> */}
