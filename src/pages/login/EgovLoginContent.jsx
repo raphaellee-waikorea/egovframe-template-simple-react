@@ -50,16 +50,17 @@ function EgovLoginContent(props) {
     }, []);
 
     useEffect(() => {
-        let data = getLocalItem(KEY_ID);
-        if (data !== null) {
-            setUserInfo({ id: data, password: 'default', userSe: 'USR' });
+        let data_id = getLocalItem(KEY_ID);
+        let data_pw = getLocalItem(KEY_ID);
+        if (data_id !== null && data_pw !== null) {
+            setUserInfo({ id: data_id, password: data_pw, userSe: 'USR' });
         }
     }, []);
 
     const submitFormHandler = (e) => {
         console.log("EgovLoginContent submitFormHandler()");
         
-        const loginUrl = "/api/v1/small/auth/login.do"
+        const loginUrl = "/wai/login.do"
         const requestOptions = {
             method: "POST",
             headers: {
@@ -67,6 +68,7 @@ function EgovLoginContent(props) {
             },
             body: JSON.stringify(userInfo)
         }
+        console.log(requestOptions);
 
         EgovNet.requestFetch(loginUrl,
             requestOptions,
@@ -110,7 +112,7 @@ function EgovLoginContent(props) {
                             <span className="group">
                                 <input type="text" name="" title="아이디" placeholder="아이디" value={userInfo?.id}
                                     onChange={e => setUserInfo({ ...userInfo, id: e.target.value })} />
-                                <input type="password" name="" title="비밀번호" placeholder="비밀번호"
+                                <input type="password" name="" title="비밀번호" placeholder="비밀번호" value={userInfo?.password}
                                     onChange={e => setUserInfo({ ...userInfo, password: e.target.value })} />
                             </span>
                             <div className="chk">

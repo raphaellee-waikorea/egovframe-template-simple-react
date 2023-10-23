@@ -112,9 +112,11 @@ function EgovShcardWaiFullScope() {
 
                         <h1 className="tit_3">종합 진단</h1>
 
+                        <p className="txt_1">상호별 상세정보와 매출 정보에 대해 표시합니디.</p>
+
+                        <h2 className="tit_5">검색 조건</h2>
                         <div className="smap">
                             <div className="left_col">
-                                <h3>검색 조건</h3>
                                 <dl>
                                     <sh>검진 지역</sh>
                                     <sb>

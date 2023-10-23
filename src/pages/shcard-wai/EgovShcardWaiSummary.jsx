@@ -22,14 +22,14 @@ function EgovShcardWaiSummary() {
                     {/* <!-- Navigation --> */}
                     <EgovLeftNav></EgovLeftNav>
                     {/* <!--// Navigation --> */}
-                    
+
                     <div className="contents SITE_SHCARD" id="contents">
                         {/* <!-- 본문 --> */}
 
                         <h1 className="tit_3">진단 요약</h1>
 
                         <p className="txt_1">서울시 전역의 소상공인에 대한 건강검진 결과에 대해 알려드립니다.</p>
-                        
+
                         <h2 className="tit_5">A.I의 의견을 전해 드립니다.</h2>
 
                         <p className="msg_2">
@@ -74,7 +74,7 @@ function EgovShcardWaiSummary() {
                                             <feMergeNode in="SourceGraphic" />
                                         </feMerge>
                                     </filter>
-                                </defs> 
+                                </defs>
                                 <g filter="url(#dropshadow)">
                                     <path id="shcard_CD11110" class="shcard_OUTLINE" d="M 455 297 l 4 -2 1 0 1 0 3 -1 4 5 7 3 2 6 0 8 -11 2 -11 1 -8 0 -9 1 -8 1 -9 1 -9 -2 -10 -1 -9 1 -4 3 -2 3 -6 -6 -3 -4 -5 -6 -4 -5 -2 -5 5 -3 0 -6 0 -10 0 -9 1 -9 -3 -4 -2 0 -2 0 -1 -4 0 -9 -5 -9 1 -10 -1 -11 -1 -6 2 -6 5 -2 7 -3 10 -2 2 -1 3 0 1 0 4 -2 8 -1 3 6 4 1 3 8 3 10 1 6 3 5 0 9 0 7 -1 5 -6 3 -6 4 -1 5 6 4 5 3 5 4 9 1 10 0 4 4 3 4 5 10 1 3 z " />
                                     <path id="shcard_CD11140" class="shcard_OUTLINE" d="M 477 316 l 0 9 5 5 -1 3 -4 5 -4 5 -5 4 -4 7 -3 4 -4 3 -4 10 -2 -1 -3 -7 -2 -5 -2 1 -1 0 -2 -1 -3 1 0 0 -3 1 -4 2 -5 -5 -6 -3 -10 -3 -4 -1 -3 -1 -2 2 -4 -1 -3 -1 -9 0 -2 2 -4 3 0 -7 1 -4 -2 -2 0 -1 6 -3 6 -4 -1 -2 -2 -5 2 -3 4 -3 9 -1 10 1 9 2 9 -1 8 -1 9 -1 8 0 11 -1 z " />
@@ -132,7 +132,7 @@ function EgovShcardWaiSummary() {
                                 </g>
                             </svg>
                         </p>
-                    
+
                         {/* <!--// 본문 --> */}
                     </div>
                 </div>

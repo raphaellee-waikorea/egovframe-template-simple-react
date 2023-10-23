@@ -31,9 +31,10 @@ ChartJS.register(
 
 export const options_line = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
         legend: {
-            position: 'top',
+            position: 'bottom',
         },
         title: {
             display: false,
@@ -42,21 +43,22 @@ export const options_line = {
 };
 
 export const options_hbar = {
-    indexAxis: 'y',
-    elements: {
-        bar: {
-            borderWidth: 2,
-        },
-    },
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
         legend: {
-            position: 'right',
+            position: 'bottom',
         },
         title: {
             display: false,
         },
     },
+    elements: {
+        bar: {
+            borderWidth: 2,
+        },
+    },
+    indexAxis: 'y',
 };
 
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
@@ -186,13 +188,13 @@ function EgovShcardWaiDetail() {
 
                         <div className="smap">
                             <div className="left_col">
-                                <h3>도심권 TOP5 업종별 매출 평균</h3>
-                                <dl><Bar options={options_hbar} data={data_hbar} /></dl>
+                                <h2 className="tit_5">도심권 TOP5 업종별 매출 평균</h2>
+                                <div class="chart_hbar"><Bar options={options_hbar} data={data_hbar} /></div>
                             </div>
                             <div className='blank_col' />
                             <div className="left_col">
-                                <h3>월별 전체 및 도심권 매출 평균</h3>
-                                <dl><Line options={options_line} data={data_line} /></dl>
+                                <h2 className="tit_5">월별 전체 및 도심권 매출 평균</h2>
+                                <div class="chart_line"><Line options={options_line} data={data_line} /></div>
                             </div>
                         </div>
 

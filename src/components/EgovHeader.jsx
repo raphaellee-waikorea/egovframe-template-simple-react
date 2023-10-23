@@ -72,6 +72,7 @@ function EgovHeader({ loginUser, onChangeLogin }) {
                     <h2 className="blind">주메뉴</h2>
                     <ul>
                         <li><NavLink to={URL.SHCARD} className={({ isActive }) => (isActive ? "cur" : "")}>소상공인 건강검진</NavLink></li>
+                        {/* <!--
                         <li><NavLink to={URL.ABOUT} className={({ isActive }) => (isActive ? "cur" : "")}>사이트소개</NavLink></li>
                         <li><NavLink to={URL.INTRO} className={({ isActive }) => (isActive ? "cur" : "")}>정보마당</NavLink></li>
                         <li><NavLink to={URL.SUPPORT} className={({ isActive }) => (isActive ? "cur" : "")}>고객지원</NavLink></li>
@@ -79,7 +80,6 @@ function EgovHeader({ loginUser, onChangeLogin }) {
                         {sessionUserSe ==='USR' &&
                             <li><NavLink to={URL.ADMIN} className={({ isActive }) => (isActive ? "cur" : "")}>사이트관리</NavLink></li>
                         }
-                        {/* <!--
                  --> */}
                     </ul>
                 </div>

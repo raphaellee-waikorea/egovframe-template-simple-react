@@ -366,3 +366,5 @@
 .SITE_SHCARD .sval .left_col dl sb_body_sth {border: none; text-align: center; vertical-align: middle; padding-top: 5px; padding-bottom: 5px; padding-left: 35px; padding-right: 35px; width: auto; font-size: 15px; color: #4b4b4b; background-color: #efefef;}
 
 .SITE_SHCARD .blank_col {width: 50px;}
+.SITE_SHCARD .smap .left_col .chart_hbar {height:400px;}
+.SITE_SHCARD .smap .left_col .chart_line {height:400px;}
